@@ -1,0 +1,14 @@
+Create a ReplicaSet
+kubectl create -f replicaset-definition.yaml
+
+List the replicasets
+kubectl get replicaset
+
+Delete a replicaset
+kubectl delete replicaset
+
+Replace the replicaset
+kubectl replace -f replicaset-definition.yaml
+
+Scale replicaset without having to modify the definition file
+kubectl scale --replicas=6 -f replicaset-definition.yaml
