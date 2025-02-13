@@ -12,3 +12,6 @@ kubectl replace -f replicaset-definition.yaml
 
 Scale replicaset without having to modify the definition file
 kubectl scale --replicas=6 -f replicaset-definition.yaml
+
+See all objects created in kubernetes
+kubectl get all
