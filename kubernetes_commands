@@ -2,7 +2,7 @@ Create a ReplicaSet
 kubectl create -f replicaset-definition.yaml
 
 List the replicasets
-kubectl get replicaset
+kubectl get replicasets
 
 Delete a replicaset
 kubectl delete replicaset
@@ -15,3 +15,20 @@ kubectl scale --replicas=6 -f replicaset-definition.yaml
 
 See all objects created in kubernetes
 kubectl get all
+
+To create a deployment
+kubectl create -f deployment-definition.yaml
+
+To get all the deployments
+kubectl get deployments
+
+To update a deployment
+kubectl apply -f deployment-definition.yaml
+kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
+
+To get the status of the deployment
+kubectl rollout status deployment/myapp-deployment
+kubectl rollout history deployment/myapp-deployment
+
+To rollback previous deployment
+kubectl rollout undo deployment/myapp-deployment
