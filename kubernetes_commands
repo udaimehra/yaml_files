@@ -32,3 +32,10 @@ kubectl rollout history deployment/myapp-deployment
 
 To rollback previous deployment
 kubectl rollout undo deployment/myapp-deployment
+
+To create a service with a service definition file
+kubectl create -f service-definition.yaml
+
+To list the services
+kubectl get svc
+
