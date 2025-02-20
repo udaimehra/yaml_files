@@ -39,3 +39,30 @@ kubectl create -f service-definition.yaml
 To list the services
 kubectl get svc
 
+To set the context to a specific namespace use the following command
+kubectl config set-context $(kubectl config current-context) --namespace=dev
+
+To list all the pods in all namespaces
+kubectl get pods --all-namespaces
+
+To get the pods in a specific namespace
+kubectl get pods --namespace=dev
+
+Some Imperative commands
+Create Objects
+kubectl run --image=nginx nginx
+kubectl create deployment --image=nginx nginx
+kubectl expose deployment nginx --port 80
+kubectl create -f nginx.yaml
+Update objects
+kubectl edit deployment nginx
+kubectl scale deployment nginx --replicaset=5
+kubectl set image deployment nginx nginx=nginx:1.18
+kubectl edit deployment nginx
+kubectl replace -f nginx.yaml
+kubectl replace --force -f nginx.yaml
+
+Declarative method of creating objects
+Create and Update on same command
+kubectl apply -f nginx.yaml
+kubectl apply -f /path/to/config-files
