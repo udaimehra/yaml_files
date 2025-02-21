@@ -1,0 +1,10 @@
+##curl --header "Content-Type:application/json" --request POST --data '{ "apiVersion": "v1", "kind": "Binding", "metadata": { "name": "nginx" }, "target": { "apiVersion": "v1", "kind": "Node", "name": "node01" } }' http://controlplane/api/v1/namespaces/default/pods/nginx/binding
+---
+apiVersion: v1
+kind: Binding
+metadata:
+  name: nginx
+target:
+  apiVersion: v1
+  kind: Node
+  name: node01
