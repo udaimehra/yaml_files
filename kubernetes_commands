@@ -69,3 +69,6 @@ kubectl apply -f /path/to/config-files
 
 Get list of all the objects in all namespaces
 kubectl get all --all-namespaces
+
+Get a pod with a specific set of selectors
+kubectl get pods --selector env=prod,bu=finance,tier=frontend
