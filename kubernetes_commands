@@ -66,3 +66,6 @@ Declarative method of creating objects
 Create and Update on same command
 kubectl apply -f nginx.yaml
 kubectl apply -f /path/to/config-files
+
+Get list of all the objects in all namespaces
+kubectl get all --all-namespaces
