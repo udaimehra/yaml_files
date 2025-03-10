@@ -75,3 +75,7 @@ kubectl get pods --selector env=prod,bu=finance,tier=frontend
 
 To label the nodes with kubectl command
 kubectl label nodes <node-name> <label-key1>=<label-value1>,<label-key2>=<label-value2>
+
+To view various events happening in the kubernetes cluster
+kubectl get events -o wide
+
