@@ -81,3 +81,6 @@ kubectl get events -o wide
 
 To look into the logs of a scheduler 
 kubectl logs <scheduler_name> --name-space=kube-system
+
+To list all the admission controllers in an apiserver
+kubectl api-server -h | grep enable-admission-plugins
