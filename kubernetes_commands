@@ -79,3 +79,5 @@ kubectl label nodes <node-name> <label-key1>=<label-value1>,<label-key2>=<label-
 To view various events happening in the kubernetes cluster
 kubectl get events -o wide
 
+To look into the logs of a scheduler 
+kubectl logs <scheduler_name> --name-space=kube-system
