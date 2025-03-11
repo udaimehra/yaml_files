@@ -84,3 +84,4 @@ kubectl logs <scheduler_name> --name-space=kube-system
 
 To list all the admission controllers in an apiserver
 kubectl api-server -h | grep enable-admission-plugins
+kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h | grep enable-admission-plugin
